@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { portfolioData } from "@/data/portfolio";
-import { Mail, Linkedin, Phone, Send } from "lucide-react";
+import { Mail, Linkedin, Phone, Send, Twitter } from "lucide-react";
 
 export function Contact() {
   const [formState, setFormState] = useState({
@@ -71,6 +71,18 @@ export function Contact() {
                 >
                   <Phone className="h-6 w-6" />
                   <span className="font-medium">WhatsApp</span>
+                </a>
+              )}
+
+              {portfolioData.personal.twitter && (
+                <a
+                  href={portfolioData.personal.twitter}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 text-muted-foreground hover:text-foreground transition-colors p-4 rounded-lg bg-background border hover:border-primary/50"
+                >
+                  <Twitter className="h-6 w-6" />
+                  <span className="font-medium">X/Twitter</span>
                 </a>
               )}
             </div>
