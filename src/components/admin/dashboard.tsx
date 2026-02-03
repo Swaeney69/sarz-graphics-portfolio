@@ -68,28 +68,43 @@ export function AdminDashboard() {
   };
 
   const generateDescription = async () => {
+    if (!currentProject.title || !currentProject.type) {
+      alert("Please fill in title and type before generating description");
+      return;
+    }
+
     setAiLoading(true);
-    // Simulate AI generation
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    const type = currentProject.type || "Design";
-    const tools = Array.isArray(currentProject.tools) ? currentProject.tools.join(", ") : currentProject.tools;
-    const title = currentProject.title || "Project";
+    try {
+      const response = await fetch("/api/generate-description", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          title: currentProject.title,
+          type: currentProject.type,
+          tools: currentProject.tools || [],
+        }),
+      });
 
-    const aiDescription = `Designed a comprehensive ${type} solution for ${title} using ${tools}. The goal was to create a user-centric experience that drives engagement and communicates brand values effectively.`;
-    
-    const aiDetails = {
-      problem: `The client faced challenges with brand inconsistency and low user engagement in their previous ${type} implementation.`,
-      approach: `Leveraged ${tools} to create a modular design system. Focused on clean typography, intuitive navigation, and accessible color palettes.`,
-      outcome: `Achieved a 30% increase in user retention and received positive feedback on the new visual direction.`
-    };
+      if (!response.ok) {
+        const error = await response.json();
+        throw new Error(error.details || "Failed to generate description");
+      }
 
-    setCurrentProject({
-      ...currentProject,
-      description: aiDescription,
-      details: aiDetails
-    });
-    setAiLoading(false);
+      const data = await response.json();
+      setCurrentProject({
+        ...currentProject,
+        description: data.description,
+        details: data.details,
+      });
+    } catch (error) {
+      alert(
+        `Error generating description: ${
+          error instanceof Error ? error.message : "Unknown error"
+        }`
+      );
+    } finally {
+      setAiLoading(false);
+    }
   };
 
   return (
