@@ -28,7 +28,7 @@ export const portfolioData = {
       description: "Complete brand identity and marketing campaign for Nigeria Real Estate Community.",
       type: "Brand Identity & Marketing",
       tools: ["Figma", "Illustrator"],
-      image: "/placeholder-project-1.svg",
+      image: "/projects/nrec-real-estate.jpg",
       details: {
         problem: "NREC needed a vibrant, trustworthy brand identity to stand out in the competitive real estate market and communicate accessibility to both agents and buyers.",
         approach: "Created a bold tri-color identity (green, orange, black) symbolizing growth, energy, and stability. Designed cohesive marketing assets including logos, promotional graphics, and digital marketing materials that emphasized their 5% broker fees advantage.",
@@ -41,7 +41,7 @@ export const portfolioData = {
       description: "Multi-variant logo design and brand identity system for tech insights company.",
       type: "Logo Design & Branding",
       tools: ["Figma", "Illustrator"],
-      image: "/placeholder-project-2.svg",
+      image: "/projects/sarz-insights.jpg",
       details: {
         problem: "Sarz Insights needed a distinctive tech-forward logo that conveyed data analysis, connectivity, and modern innovation across multiple applications.",
         approach: "Developed four unique logo variations: geometric cyan design, dark navy tech-focused version, and circular yellow/orange variants. Each maintains brand consistency while adapting to different contexts. Created a scalable brand system suitable for digital and print applications.",
@@ -54,7 +54,7 @@ export const portfolioData = {
       description: "Logo and brand identity design for interactive technology company.",
       type: "Logo Design",
       tools: ["Figma", "Illustrator"],
-      image: "/placeholder-project-3.svg",
+      image: "/projects/olymp-interactive.jpg",
       details: {
         problem: "Olymp Interactive needed a modern, memorable logo that communicated innovation, movement, and interactivity in the tech space.",
         approach: "Designed a bold geometric logo featuring a stylized arrow and circle in vibrant red, symbolizing dynamic movement and technological prowess. The clean lines ensure scalability across all media sizes.",
@@ -67,7 +67,7 @@ export const portfolioData = {
       description: "Marketing and promotional design for online forex trading training and contest.",
       type: "Marketing Design",
       tools: ["Figma", "Illustrator"],
-      image: "/placeholder-project-4.svg",
+      image: "/projects/green-forex.jpg",
       details: {
         problem: "Green Forex needed eye-catching promotional materials to attract traders to their online training program and trading contest with compelling financial incentives.",
         approach: "Designed professional marketing graphics featuring green gradient visuals symbolizing growth and profit. Highlighted key program features, prize structure ($100 seed funding for winner, $50 for runners-up), and event details with clear visual hierarchy.",
@@ -80,7 +80,7 @@ export const portfolioData = {
       description: "UI/UX design consultation and visual communication strategy for tech startups.",
       type: "UI Design & Consultation",
       tools: ["Figma", "No-code tools"],
-      image: "/placeholder-project-5.svg",
+      image: "/projects/ui-consultation.jpg",
       details: {
         problem: "Startups needed professional design guidance to create polished user interfaces and maintain visual consistency across digital products.",
         approach: "Provided comprehensive design consultation including UI/UX best practices, design system creation, and visual communication strategies. Used Figma prototypes to demonstrate concepts and ensure client alignment before development.",
